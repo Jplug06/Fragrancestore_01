@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Fragrance Paradise</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Fragrance Paradise</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Fragrance Collection</h1>
+                <p>Discover your perfect scent from our curated selection</p>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <div class="filters">
+                    <h3>Filter by Category</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="masculine">Masculine</button>
+                        <button class="filter-btn" data-category="sexy">Sexy</button>
+                        <button class="filter-btn" data-category="fresh">Fresh</button>
+                    </div>
+                    
+                    <div class="subcategory-filters" id="subcategoryFilters">
+                        <!-- Subcategory filters will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <div class="loading">Loading products...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Place Your Order</h2>
+            <div class="product-summary" id="productSummary">
+                <!-- Product details will be populated here -->
+            </div>
+            <form id="orderForm" class="order-form">
+                <input type="hidden" id="productId" name="product_id">
+                <input type="hidden" id="productName" name="product_name">
+                <input type="hidden" id="productPrice" name="product_price">
+                
+                <div class="form-group">
+                    <label for="customerName">Full Name *</label>
+                    <input type="text" id="customerName" name="customer_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number *</label>
+                    <input type="tel" id="customerPhone" name="customer_phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="orderNotes">Additional Notes (Optional)</label>
+                    <textarea id="orderNotes" name="notes" rows="3" placeholder="Any special instructions or delivery preferences..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fragrance Paradise</h3>
+                    <p>Your premier destination for authentic fragrances in Ghana</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 +233 XX XXX XXXX</p>
+                    <p>📧 info@fragranceparadise.gh</p>
+                    <p>📍 Accra, Ghana</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fragrance Paradise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
